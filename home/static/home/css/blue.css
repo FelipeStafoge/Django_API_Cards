@@ -1,0 +1,20 @@
+body{
+    background-color: rgb(132, 125, 135);
+}
+
+.btn{
+    padding: 10px 8px;
+    width: 100px;
+    color: #fff;
+    background: rgb(164, 164, 169);
+    border: 1px solid #555;
+    border-radius: 5px;
+    text-align: center;
+    user-select: none;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: rgb(122, 122, 253);
+    transition: 0.3s;
+}
