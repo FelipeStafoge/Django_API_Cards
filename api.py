@@ -21,4 +21,3 @@ def generate_a_card(deck_id):
     else:
         card_color = 'BLACK'
     return card, card_color, card_suit, card_value, json
-
