@@ -1,24 +1,16 @@
+{% extends "global/base.html" %}
 {% load static %}
-{% include "global/base.html" %}
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Take a card</title>
-    <link rel="stylesheet" href="{% static "home/css/sytle.css" %}">
-</head>
+<title>Take a card</title>
 <body>
-    </h1>
-        A carta é: {{card_value}}
-        O naipe da carta é: {{card_suit}}
-        A cor é: {{card_color}}
-        O ID do deck é: {{deck_id}}
+    <h1>{% block text %}Sua carta é:{% endblock text %}</h1>
     <h1>
-        {% block text %}{% endblock text %}
-    <form action="{%url 'index:take_a_card'%}" method="get">
-        <button class="btn">Take a random card</button>
-    </form>
-    
+        {% block card %}
+        O valor da carta é: {{card_value}} \
+        O naipe da carta é: {{card_suit}} \
+        A cor é: {{card_color}} \
+        O ID do deck é: {{deck_id}} \
+        {% endblock card %}
+    </h1>
 </body>
 </html>

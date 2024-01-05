@@ -1,18 +1,7 @@
-
+{% extends "global/base.html" %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Cartas</title>
-        <link rel="stylesheet" href="{% static "home/css/blue.css" %}">
-    </head>
-    <body>
-        <h1>Esta é a pagina principal. Botão logo abaixo: </h1>
-
-        <form action="{%url 'index:take_a_card'%}" method="get">
-            <button class="btn">Botao</button>
-        </form>
+<title>Cartas</title>
+<body>
+        <h1>{% block text %}Página inicial, clique no botão:{% endblock text %} </h1>
 </body>
 </html>

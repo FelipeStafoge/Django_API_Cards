@@ -1,27 +1,27 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Take a random card</title>
+    <link rel="stylesheet" href="{% static "home/css/style.css" %}">
 </head>
+
 <body>
+    <h1>{% block text %}sem att{% endblock text %}</h1>
     <header>
-        <div class="container-logo">
-            <div class="logo-imagem"></div>
-            <div class="logo-texto">
-                <h1>Logotipo</h1>
-            </div>
-            <div class='menu'>
+
                 <ul>
-                    <li><a href="#">Home</a></li>
+                    <li><a href="{%url 'index:index'%}">Home</a></li>
                 </ul>
-
-
             </div>
 
         </div>
     </header>
+    <form action="{%url 'index:take_a_card'%}" method="get">
+        <button class="btn">Take a random card</button>
+    </form>
+    <h1>{% block card %}{% endblock card %}</h1>
     
 </body>
 </html>
