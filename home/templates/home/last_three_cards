@@ -1,0 +1,9 @@
+{% include "global/base.html" %}
+{% load static %}
+<!DOCTYPE html>
+<title>{{title}}</title>
+<body>
+    <h1>{{}}</h1>
+    
+</body>
+</html>

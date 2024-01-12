@@ -1,7 +1,18 @@
-{% extends "global/base.html" %}
+{% include "global/base.html" %}
 {% load static %}
-<title>Cartas</title>
+<title>Cards</title>
 <body>
-        <h1>{% block text %}Página inicial, clique no botão:{% endblock text %} </h1>
+        <div class="text-home">
+                <h1>Home</h1>
+        </div>
+        <div class="text-home">
+                <h1>Click on the button to take a random card.</h1>
+        </div>
+
+        <div class="div-button">
+            <form action="{%url 'index:take_a_card'%}" method="get">
+                <button class="btn">Take a random card</button>
+            </form>
+        </div>
 </body>
 </html>

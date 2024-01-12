@@ -1,16 +1,28 @@
-{% extends "global/base.html" %}
+{% include "global/base.html" %}
 {% load static %}
 <!DOCTYPE html>
-<title>Take a card</title>
+<title>{{title}}</title>
 <body>
-    <h1>{% block text %}Sua carta é:{% endblock text %}</h1>
+    <h1>Sua carta é:</h1>
     <h1>
-        {% block card %}
+       
         O valor da carta é: {{card_value}} \
         O naipe da carta é: {{card_suit}} \
         A cor é: {{card_color}} \
         O ID do deck é: {{deck_id}} \
-        {% endblock card %}
+        
     </h1>
+    
+    <div class="card-image">
+        <img src="{{card_image}}" alt="">
+    </div>
+    
+    <div class="div-button">
+        <form action="{%url 'index:take_a_card'%}" method="get">
+            <button class="btn">Take a random card</button>
+        </form>
+    </div>
+    
+
 </body>
 </html>
