@@ -1,1 +1,28 @@
-{"_default": {"1": {"success": true, "deck_id": "gs6w22mk7460", "remaining": 52, "shuffled": true}}}
+{
+    "_default": {
+        "1": {
+            "success": true,
+            "deck_id": "5o1egtrmwine",
+            "remaining": 52,
+            "shuffled": true
+        },
+        "2": {
+            "number": 6
+        },
+        "6": {
+            "card_value": "10",
+            "card_suit": "HEARTS",
+            "card_image": "https://deckofcardsapi.com/static/img/0H.png"
+        },
+        "7": {
+            "card_value": "8",
+            "card_suit": "HEARTS",
+            "card_image": "https://deckofcardsapi.com/static/img/8H.png"
+        },
+        "8": {
+            "card_value": "KING",
+            "card_suit": "CLUBS",
+            "card_image": "https://deckofcardsapi.com/static/img/KC.png"
+        }
+    }
+}
