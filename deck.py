@@ -5,7 +5,7 @@ deck = TinyDB('deck.json', indent=4)
 consult = Query()
 
 number = {
-    'number': 3
+    'number': 2
 }
 
 

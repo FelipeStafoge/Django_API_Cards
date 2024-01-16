@@ -28,31 +28,29 @@ def generate_a_card(deck_id):
         'card_suit': card_suit,
         'card_image': card_image
     }
+    if len(deck) == 5:
+        new_number = deck.all()[1]['number']
+        new_number += 1
+        deck.remove(doc_ids=[new_number])
+        deck.update({"number": new_number},doc_ids=[2])
+
     deck.insert(card_to_show.copy())
     card_to_show.clear()
-    if len(deck.all()) > 5:
-        deck.remove(doc_ids=[number["number"]])
-        number['number'] += 1
-        deck.update(
-            {'number': number['number']},
-            doc_ids=[2]
-        )
-
-
-
-    
-
     return card, card_color, card_suit, card_value, card_image,json
 
 
 def show_last_three():
     try:
-        first_card = last_three[0]
-        second_card = last_three[1]
-        third_card = last_three[2]
-    except:
-        print('You got not enough cards')
-    print('vasco')
+        first_card = deck.all()[number['number']]
+        second_card = deck.all()[number['number']+1]
+        third_card = deck.all()[number['number']+2]
+        error = None
+
+    except(ValueError):
+        error = 'ERROR. YOU GOT NOT ENOUGH CARDS'
+    else:
+        print(first_card, second_card, third_card)
+        return error, first_card, second_card, third_card
 
 
 

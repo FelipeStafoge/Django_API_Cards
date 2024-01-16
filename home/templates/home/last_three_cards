@@ -3,7 +3,30 @@
 <!DOCTYPE html>
 <title>{{title}}</title>
 <body>
-    <h1>Teste</h1>
+    <div class="text-home">
+        <h1>Suas cartas foram</h1>
+</div>
+    <div class="card-list">
+        <h1>{{first_card_value}}</h1>
+        <h1>{{second_card_value}}</h1>
+        <h1>{{third_card_value}}</h1>
+    </div>
+
+
+
+    <div class="card-image">
+        <img src="{{first_card_image}}" alt="">
+        <img src="{{second_card_image}}" alt="">
+        <img src="{{third_card_image}}" alt="">
+    </div>
+    <div class="div-button">
+        <form action="{%url 'index:take_a_card'%}" method="get">
+            <button class="btn">Take a random card</button>
+        </form>
+        <form action="{%url 'index:index'%}" method="get">
+            <button class="btn">Home</button>
+        </form>
+    </div>
     
 </body>
 </html>
