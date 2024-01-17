@@ -2,27 +2,17 @@
     "_default": {
         "1": {
             "success": true,
-            "deck_id": "xxeul9um8b0g",
+            "deck_id": "r00d2v4gtor3",
             "remaining": 52,
             "shuffled": true
         },
         "2": {
-            "number": 15
+            "number": 2
         },
-        "16": {
-            "card_value": "8",
+        "3": {
+            "card_value": "4",
             "card_suit": "SPADES",
-            "card_image": "https://deckofcardsapi.com/static/img/8S.png"
-        },
-        "17": {
-            "card_value": "8",
-            "card_suit": "CLUBS",
-            "card_image": "https://deckofcardsapi.com/static/img/8C.png"
-        },
-        "18": {
-            "card_value": "JACK",
-            "card_suit": "CLUBS",
-            "card_image": "https://deckofcardsapi.com/static/img/JC.png"
+            "card_image": "https://deckofcardsapi.com/static/img/4S.png"
         }
     }
 }

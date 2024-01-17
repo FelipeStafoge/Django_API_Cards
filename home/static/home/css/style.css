@@ -97,5 +97,28 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 10px
 
+}
+
+.card-value{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.word{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+}
+
+.error-message{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

@@ -40,17 +40,19 @@ def generate_a_card(deck_id):
 
 
 def show_last_three():
+    first_card = None
+    second_card = None
+    third_card = None
+    error = None
     try:
         first_card = deck.all()[number['number']]
         second_card = deck.all()[number['number']+1]
         third_card = deck.all()[number['number']+2]
-        error = None
-
-    except(ValueError):
-        error = 'ERROR. YOU GOT NOT ENOUGH CARDS'
-    else:
-        print(first_card, second_card, third_card)
+        error = 0
+    except:
+        error = 1
+    finally:
         return error, first_card, second_card, third_card
 
 
-
+    

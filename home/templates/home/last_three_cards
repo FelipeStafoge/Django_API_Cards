@@ -4,13 +4,15 @@
 <title>{{title}}</title>
 <body>
     <div class="text-home">
-        <h1>Suas cartas foram</h1>
+        <h1>Your cards were these:</h1>
 </div>
     <div class="card-list">
-        <h1>{{first_card_value}}</h1>
-        <h1>{{second_card_value}}</h1>
-        <h1>{{third_card_value}}</h1>
+        <p class="word">{{first_card_value}}</p>
+        <p class="word">{{second_card_value}}</p>
+        <p class="word">{{third_card_value}}</p>
     </div>
+
+    
 
 
 
@@ -20,11 +22,11 @@
         <img src="{{third_card_image}}" alt="">
     </div>
     <div class="div-button">
-        <form action="{%url 'index:take_a_card'%}" method="get">
-            <button class="btn">Take a random card</button>
-        </form>
         <form action="{%url 'index:index'%}" method="get">
             <button class="btn">Home</button>
+        </form>
+        <form action="{%url 'index:take_a_card'%}" method="get">
+            <button class="btn">Take a random card</button>
         </form>
     </div>
     
